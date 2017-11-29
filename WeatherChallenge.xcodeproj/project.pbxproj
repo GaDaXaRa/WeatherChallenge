@@ -10,6 +10,9 @@
 		3F25FA211FCF28D700606A59 /* WeatherChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F25FA171FCF28D700606A59 /* WeatherChallenge.framework */; };
 		3F25FA261FCF28D700606A59 /* WeatherChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F25FA251FCF28D700606A59 /* WeatherChallengeTests.swift */; };
 		3F25FA281FCF28D700606A59 /* WeatherChallenge.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F25FA1A1FCF28D700606A59 /* WeatherChallenge.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3F25FA341FCF295A00606A59 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F25FA331FCF295A00606A59 /* Weather.swift */; };
+		3F25FA371FCF298500606A59 /* WeatherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F25FA361FCF298500606A59 /* WeatherTests.swift */; };
+		3F25FA3B1FCF29CF00606A59 /* Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F25FA3A1FCF29CF00606A59 /* Mocks.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +32,9 @@
 		3F25FA201FCF28D700606A59 /* WeatherChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeatherChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F25FA251FCF28D700606A59 /* WeatherChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherChallengeTests.swift; sourceTree = "<group>"; };
 		3F25FA271FCF28D700606A59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F25FA331FCF295A00606A59 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		3F25FA361FCF298500606A59 /* WeatherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherTests.swift; sourceTree = "<group>"; };
+		3F25FA3A1FCF29CF00606A59 /* Mocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mocks.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +77,7 @@
 		3F25FA191FCF28D700606A59 /* WeatherChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				3F25FA311FCF293A00606A59 /* Model */,
 				3F25FA1A1FCF28D700606A59 /* WeatherChallenge.h */,
 				3F25FA1B1FCF28D700606A59 /* Info.plist */,
 			);
@@ -80,10 +87,36 @@
 		3F25FA241FCF28D700606A59 /* WeatherChallengeTests */ = {
 			isa = PBXGroup;
 			children = (
+				3F25FA351FCF297600606A59 /* Mocks */,
+				3F25FA321FCF294500606A59 /* Model */,
 				3F25FA251FCF28D700606A59 /* WeatherChallengeTests.swift */,
 				3F25FA271FCF28D700606A59 /* Info.plist */,
 			);
 			path = WeatherChallengeTests;
+			sourceTree = "<group>";
+		};
+		3F25FA311FCF293A00606A59 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3F25FA331FCF295A00606A59 /* Weather.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3F25FA321FCF294500606A59 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3F25FA361FCF298500606A59 /* WeatherTests.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3F25FA351FCF297600606A59 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				3F25FA3A1FCF29CF00606A59 /* Mocks.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +181,7 @@
 				TargetAttributes = {
 					3F25FA161FCF28D700606A59 = {
 						CreatedOnToolsVersion = 9.1;
+						LastSwiftMigration = 0910;
 						ProvisioningStyle = Automatic;
 					};
 					3F25FA1F1FCF28D700606A59 = {
@@ -196,6 +230,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F25FA341FCF295A00606A59 /* Weather.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,6 +238,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F25FA371FCF298500606A59 /* WeatherTests.swift in Sources */,
+				3F25FA3B1FCF29CF00606A59 /* Mocks.swift in Sources */,
 				3F25FA261FCF28D700606A59 /* WeatherChallengeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -334,6 +371,7 @@
 		3F25FA2C1FCF28D700606A59 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -347,6 +385,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.gadaxara.WeatherChallenge;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -355,6 +394,7 @@
 		3F25FA2D1FCF28D700606A59 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -376,6 +416,7 @@
 		3F25FA2F1FCF28D700606A59 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KDP29GBQ4N;
 				INFOPLIST_FILE = WeatherChallengeTests/Info.plist;
@@ -390,6 +431,7 @@
 		3F25FA301FCF28D700606A59 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = KDP29GBQ4N;
 				INFOPLIST_FILE = WeatherChallengeTests/Info.plist;
