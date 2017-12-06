@@ -40,7 +40,7 @@ class WeatherManager: NSObject {
     
     weak var delegate: WeatherManagerDelegate?    
     
-    init(fetchWeather: FetchWeatherUseCase = FetchWeather(), weatherAtCurrenLocation: WeatherAtCurrentLocationUseCase = WeatherAtCurrentLocation(), weatherStorage: WeatherStorage) {
+    init(fetchWeather: FetchWeatherUseCase = FetchWeather(), weatherAtCurrenLocation: WeatherAtCurrentLocationUseCase = WeatherAtCurrentLocation(), weatherStorage: WeatherStorage = CodableDiskStorage<Weather>()) {
         self.fetchWeather = fetchWeather
         self.weatherAtCurrenLocation = weatherAtCurrenLocation
         self.weatherStorage = weatherStorage
