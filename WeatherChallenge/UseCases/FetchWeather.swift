@@ -9,7 +9,8 @@
 import UIKit
 
 protocol FetchWeatherTask {
-    func fetch(by city: String, _: ([String: Any]) -> ())
+    func fetch(by city: String, _ completion: @escaping ([String : Any]?) -> ())
+    func fetch(by coordinates:(lat: String, lon: String), _ completion: @escaping ([String : Any]?) -> ())
 }
 
 class FetchWeather: NSObject {
@@ -19,13 +20,14 @@ class FetchWeather: NSObject {
     init(task: FetchWeatherTask) {
         self.task = task
     }
-    
-    func fetch(from city: String, _ completion: @escaping (Weather?) -> ()) {
+}
+
+extension FetchWeather: FetchWeatherUseCase {
+    func fetchWeather(at city: String, _ completion: @escaping (Weather?) -> ()) {
         DispatchQueue.global().async {
             self.task.fetch(by: city, { (json) in
                 completion(Weather(json: json))
             })
         }
     }
-
 }

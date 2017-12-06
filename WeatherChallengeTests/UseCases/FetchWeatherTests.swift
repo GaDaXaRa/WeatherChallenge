@@ -13,17 +13,19 @@ import XCTest
 class FetchWeatherTests: XCTestCase {
     
     struct MockedTask: FetchWeatherTask {
-        func fetch(by city: String, _ completion: ([String : Any]) -> ()) {
+        func fetch(by coordinates: (lat: String, lon: String), _ completion: @escaping ([String : Any]?) -> ()) {
             completion(Mocks.weatherJSON)
         }
         
-        
+        func fetch(by city: String, _ completion: @escaping ([String : Any]?) -> ()) {
+            completion(Mocks.weatherJSON)
+        }        
     }
     
     func testShouldFetchWeatherFromACity() {
         let sut = FetchWeather(task: MockedTask())
         let sutExpectation = expectation(description: "fetch weather")
-        sut.fetch(from: "London") { weather in
+        sut.fetchWeather(at: "London") { weather in
             XCTAssertNotNil(weather)
             sutExpectation.fulfill()
         }

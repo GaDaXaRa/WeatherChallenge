@@ -10,37 +10,44 @@ import UIKit
 
 class HTTPFetchWeatherTask: NSObject {
     
-    fileprivate let dataTask: URLSessionDataTask?
-    var request: URLRequest? {
-        return dataTask?.currentRequest
-    }
-    private var payload = [String: String]()
+    private(set) var payload = [String: String]()
     
-    init(configuration: Configuration = Configuration(), city: String, _ completion: @escaping ([String:Any]?) -> ()) {
+    fileprivate let configuration: Configuration
+    
+    init(configuration: Configuration = Configuration()) {
+        self.configuration = configuration
         payload["APPID"] = configuration.appId
-        payload["q"] = city
-        self.dataTask = HTTPFetchWeatherTask.buildTask(for: configuration.baseUrl, with: payload, in: configuration.session, completion)
-    }    
+    }
     
-    func resume() {
-        dataTask?.resume()
+}
+
+extension HTTPFetchWeatherTask: FetchWeatherTask {
+    func fetch(by coordinates: (lat: String, lon: String), _ completion: @escaping ([String : Any]?) -> ()) {
+        payload["lat"] = coordinates.lat
+        payload["lon"] = coordinates.lon
+        buildTask(completion)
+    }
+    
+    func fetch(by city: String, _ completion: @escaping ([String : Any]?) -> ()) {
+        payload["q"] = city
+        buildTask(completion)
     }
 }
 
 extension HTTPFetchWeatherTask {
-    static func buildTask(for url: URL, with params:[String: String], in session: URLSession, _ completion: @escaping ([String:Any]?) -> ()) -> URLSessionDataTask? {
-        guard let url = compose(url: url, with: params)  else { return nil }
+    private func buildTask(_ completion: @escaping ([String:Any]?) -> ()) {
+        guard let url = compose(url: configuration.baseUrl, with: payload)  else { return }
         
-        return session.dataTask(with: URLRequest(url: url)) { (data, response, error) in
+        configuration.session.dataTask(with: URLRequest(url: url)) { (data, response, error) in
             guard error != nil, let data = data, let json = try? JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] else {
                 completion(nil)
                 return
             }
             completion(json)
-        }
+        }.resume()
     }
     
-    private static func compose(url: URL, with params: [String: String]) -> URL? {
+    private func compose(url: URL, with params: [String: String]) -> URL? {
         var components = URLComponents(url: url, resolvingAgainstBaseURL: false)
         components?.queryItems = params.map {URLQueryItem(name: $0.key, value: $0.value)}
         return components?.url

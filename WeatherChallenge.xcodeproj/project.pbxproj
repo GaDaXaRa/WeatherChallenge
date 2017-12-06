@@ -15,7 +15,8 @@
 		3F25FA3E1FCF35C600606A59 /* FetchWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F25FA3D1FCF35C600606A59 /* FetchWeather.swift */; };
 		3F25FA411FCF35E800606A59 /* FetchWeatherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F25FA401FCF35E800606A59 /* FetchWeatherTests.swift */; };
 		3F25FA471FCF38D500606A59 /* HTTPFetchWeatherTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F25FA461FCF38D500606A59 /* HTTPFetchWeatherTask.swift */; };
-		3F25FA491FCF38F200606A59 /* HTTPFetchWeatherTaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F25FA481FCF38F200606A59 /* HTTPFetchWeatherTaskTests.swift */; };
+		3F25FA4B1FD1CE7B00606A59 /* WeatherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F25FA4A1FD1CE7B00606A59 /* WeatherManager.swift */; };
+		3F25FA4D1FD1D20200606A59 /* WeatherManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F25FA4C1FD1D20200606A59 /* WeatherManagerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +41,8 @@
 		3F25FA3D1FCF35C600606A59 /* FetchWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchWeather.swift; sourceTree = "<group>"; };
 		3F25FA401FCF35E800606A59 /* FetchWeatherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchWeatherTests.swift; sourceTree = "<group>"; };
 		3F25FA461FCF38D500606A59 /* HTTPFetchWeatherTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPFetchWeatherTask.swift; sourceTree = "<group>"; };
-		3F25FA481FCF38F200606A59 /* HTTPFetchWeatherTaskTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPFetchWeatherTaskTests.swift; sourceTree = "<group>"; };
+		3F25FA4A1FD1CE7B00606A59 /* WeatherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherManager.swift; sourceTree = "<group>"; };
+		3F25FA4C1FD1D20200606A59 /* WeatherManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherManagerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 				3F25FA311FCF293A00606A59 /* Model */,
 				3F25FA1A1FCF28D700606A59 /* WeatherChallenge.h */,
 				3F25FA1B1FCF28D700606A59 /* Info.plist */,
+				3F25FA4A1FD1CE7B00606A59 /* WeatherManager.swift */,
 			);
 			path = WeatherChallenge;
 			sourceTree = "<group>";
@@ -95,11 +98,11 @@
 		3F25FA241FCF28D700606A59 /* WeatherChallengeTests */ = {
 			isa = PBXGroup;
 			children = (
-				3F25FA421FCF389B00606A59 /* Tasks */,
 				3F25FA3F1FCF35D000606A59 /* UseCases */,
 				3F25FA351FCF297600606A59 /* Mocks */,
 				3F25FA321FCF294500606A59 /* Model */,
 				3F25FA271FCF28D700606A59 /* Info.plist */,
+				3F25FA4C1FD1D20200606A59 /* WeatherManagerTests.swift */,
 			);
 			path = WeatherChallengeTests;
 			sourceTree = "<group>";
@@ -142,14 +145,6 @@
 				3F25FA401FCF35E800606A59 /* FetchWeatherTests.swift */,
 			);
 			path = UseCases;
-			sourceTree = "<group>";
-		};
-		3F25FA421FCF389B00606A59 /* Tasks */ = {
-			isa = PBXGroup;
-			children = (
-				3F25FA481FCF38F200606A59 /* HTTPFetchWeatherTaskTests.swift */,
-			);
-			path = Tasks;
 			sourceTree = "<group>";
 		};
 		3F25FA451FCF38C800606A59 /* Tasks */ = {
@@ -273,6 +268,7 @@
 			files = (
 				3F25FA471FCF38D500606A59 /* HTTPFetchWeatherTask.swift in Sources */,
 				3F25FA341FCF295A00606A59 /* Weather.swift in Sources */,
+				3F25FA4B1FD1CE7B00606A59 /* WeatherManager.swift in Sources */,
 				3F25FA3E1FCF35C600606A59 /* FetchWeather.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -282,8 +278,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F25FA371FCF298500606A59 /* WeatherTests.swift in Sources */,
-				3F25FA491FCF38F200606A59 /* HTTPFetchWeatherTaskTests.swift in Sources */,
 				3F25FA3B1FCF29CF00606A59 /* Mocks.swift in Sources */,
+				3F25FA4D1FD1D20200606A59 /* WeatherManagerTests.swift in Sources */,
 				3F25FA411FCF35E800606A59 /* FetchWeatherTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
