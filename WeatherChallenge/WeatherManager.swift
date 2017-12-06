@@ -19,6 +19,7 @@ protocol WeatherAtCurrentLocationUseCase {
 
 protocol WeatherManagerDelegate: class {
     func didUpdateWeather(_ weather: Weather)
+    func didSaveWeather(_ weather: Weather)
 }
 
 protocol WeatherStorage {
@@ -66,6 +67,7 @@ class WeatherManager: NSObject {
     
     func save(weather: Weather) {
         weatherStorage.save(weather)
+        delegate?.didSaveWeather(weather)
     }
     
     func listSaved(_ completion: @escaping ([Weather]) -> ()) {
