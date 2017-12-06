@@ -20,6 +20,7 @@
 		3F304F861FD86A3F0044BCCA /* CheckLocationPermission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F304F851FD86A3F0044BCCA /* CheckLocationPermission.swift */; };
 		3F304F881FD89FB00044BCCA /* WeatherAtCurrentLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F304F871FD89FB00044BCCA /* WeatherAtCurrentLocation.swift */; };
 		3F304F8A1FD8A2680044BCCA /* WeatherAtCurrentLocationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F304F891FD8A2680044BCCA /* WeatherAtCurrentLocationTests.swift */; };
+		3F304F8C1FD8AD660044BCCA /* CodableDiskStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F304F8B1FD8AD660044BCCA /* CodableDiskStorage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		3F304F851FD86A3F0044BCCA /* CheckLocationPermission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckLocationPermission.swift; sourceTree = "<group>"; };
 		3F304F871FD89FB00044BCCA /* WeatherAtCurrentLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAtCurrentLocation.swift; sourceTree = "<group>"; };
 		3F304F891FD8A2680044BCCA /* WeatherAtCurrentLocationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAtCurrentLocationTests.swift; sourceTree = "<group>"; };
+		3F304F8B1FD8AD660044BCCA /* CodableDiskStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableDiskStorage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +145,7 @@
 				3F25FA3D1FCF35C600606A59 /* FetchWeather.swift */,
 				3F304F851FD86A3F0044BCCA /* CheckLocationPermission.swift */,
 				3F304F871FD89FB00044BCCA /* WeatherAtCurrentLocation.swift */,
+				3F304F8B1FD8AD660044BCCA /* CodableDiskStorage.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -277,6 +280,7 @@
 			files = (
 				3F304F861FD86A3F0044BCCA /* CheckLocationPermission.swift in Sources */,
 				3F25FA471FCF38D500606A59 /* HTTPFetchWeatherTask.swift in Sources */,
+				3F304F8C1FD8AD660044BCCA /* CodableDiskStorage.swift in Sources */,
 				3F304F881FD89FB00044BCCA /* WeatherAtCurrentLocation.swift in Sources */,
 				3F25FA341FCF295A00606A59 /* Weather.swift in Sources */,
 				3F25FA4B1FD1CE7B00606A59 /* WeatherManager.swift in Sources */,
