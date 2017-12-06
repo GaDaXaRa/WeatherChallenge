@@ -18,15 +18,15 @@ protocol WeatherManagerDelegate: class {
 }
 
 class WeatherManager: NSObject {
-    let fetchWeather: FetchWeatherUseCase
-    weak var delegate: WeatherManagerDelegate?
-    
     private(set) var weather: Weather? {
         didSet {
             guard let weather = weather else { return }
             delegate?.didUpdateWeather(weather)
         }
     }
+    
+    let fetchWeather: FetchWeatherUseCase
+    weak var delegate: WeatherManagerDelegate?    
     
     init(fetchWeather: FetchWeatherUseCase = FetchWeather(task: HTTPFetchWeatherTask())) {
         self.fetchWeather = fetchWeather
