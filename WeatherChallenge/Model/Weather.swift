@@ -55,3 +55,17 @@ struct Weather: Codable {
         self.imageUrlPrefix = imageUrlPrefix
     }
 }
+
+extension Weather.Location: Equatable {
+    static func ==(lhs: Weather.Location, rhs: Weather.Location) -> Bool {
+        return lhs.latitude == rhs.latitude && lhs.longitude == rhs.longitude
+    }
+}
+
+extension Weather: Equatable {
+    static func ==(lhs: Weather, rhs: Weather) -> Bool {
+        return lhs.name == rhs.name && lhs.description == rhs.description && lhs.city == rhs.city && lhs.creationDate == rhs.creationDate && lhs.minTemp == rhs.minTemp && lhs.maxTemp == rhs.maxTemp && lhs.iconURL == rhs.iconURL && lhs.location == rhs.location
+    }
+    
+    
+}

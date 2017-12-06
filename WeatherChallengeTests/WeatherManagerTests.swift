@@ -13,7 +13,7 @@ import CoreLocation
 
 class WeatherManagerTests: XCTestCase {
     
-    let sut = WeatherManager(fetchWeather: MockedUseCase(), weatherAtCurrenLocation: MockedWeatherAtCurrentLocationUseCase())
+    let sut = WeatherManager(fetchWeather: MockedUseCase(), weatherAtCurrenLocation: MockedWeatherAtCurrentLocationUseCase(), weatherStorage: MockedWeatherStorage())
     
     func testShouldReturnWeatherByCity() {
         let delegate = MockedDelegate(expectation: expectation(description: "weather by city expectation"))
@@ -55,6 +55,20 @@ class WeatherManagerTests: XCTestCase {
             XCTAssertEqual(mockedLocation.coordinate.longitude, delegate.weather?.location.longitude)
         }
     }
+    
+    func testShouldQuerySavedItems() {
+        let weather = Weather(json: Mocks.weatherJSON())!
+        let sutExpectation = expectation(description: "query saved items")
+        sut.save(weather: weather)
+        sut.listSaved { (weathers) in
+            XCTAssertEqual(weather, weathers.first!)
+            sutExpectation.fulfill()
+        }
+        
+        waitForExpectations(timeout: 0.5) { (error) in
+            if error != nil { XCTFail() }
+        }
+    }
 }
 
 extension WeatherManagerTests {
@@ -87,6 +101,18 @@ extension WeatherManagerTests {
         func fetchWeatherAtCurrentLocation(with locationManager: CLLocationManager, _ completion: @escaping (Weather?) -> ()) {
             let coordinates = (lat: locationManager.location!.coordinate.latitude, lon: locationManager.location!.coordinate.longitude)
             completion(Weather(json: Mocks.weatherJSON(coordinates: coordinates)))
+        }
+    }
+    
+    class MockedWeatherStorage: WeatherStorage {
+        var weathers = [Weather]()
+        
+        func save(_ weather: Weather) {
+            weathers.append(weather)
+        }
+        
+        func listAll(_ completion: @escaping ([Weather]) -> ()) {
+            completion(weathers)
         }
     }
 }

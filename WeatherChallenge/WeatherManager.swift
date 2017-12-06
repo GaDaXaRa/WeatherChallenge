@@ -21,6 +21,11 @@ protocol WeatherManagerDelegate: class {
     func didUpdateWeather(_ weather: Weather)
 }
 
+protocol WeatherStorage {
+    func save(_ weather: Weather)
+    func listAll(_: @escaping ([Weather]) -> ())
+}
+
 class WeatherManager: NSObject {
     private(set) var weather: Weather? {
         didSet {
@@ -31,11 +36,14 @@ class WeatherManager: NSObject {
     
     let fetchWeather: FetchWeatherUseCase
     let weatherAtCurrenLocation: WeatherAtCurrentLocationUseCase
+    let weatherStorage: WeatherStorage
+    
     weak var delegate: WeatherManagerDelegate?    
     
-    init(fetchWeather: FetchWeatherUseCase = FetchWeather(), weatherAtCurrenLocation: WeatherAtCurrentLocationUseCase = WeatherAtCurrentLocation()) {
+    init(fetchWeather: FetchWeatherUseCase = FetchWeather(), weatherAtCurrenLocation: WeatherAtCurrentLocationUseCase = WeatherAtCurrentLocation(), weatherStorage: WeatherStorage) {
         self.fetchWeather = fetchWeather
         self.weatherAtCurrenLocation = weatherAtCurrenLocation
+        self.weatherStorage = weatherStorage
     }
 
     func weather(at city: String) {
@@ -54,5 +62,13 @@ class WeatherManager: NSObject {
         weatherAtCurrenLocation.fetchWeatherAtCurrentLocation(with: locationManager) { (weather) in
             self.weather = weather
         }
+    }
+    
+    func save(weather: Weather) {
+        weatherStorage.save(weather)
+    }
+    
+    func listSaved(_ completion: @escaping ([Weather]) -> ()) {
+        weatherStorage.listAll(completion)
     }
 }
