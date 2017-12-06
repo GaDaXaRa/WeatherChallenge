@@ -15,16 +15,25 @@ protocol FetchWeatherTask {
 
 class FetchWeather: NSObject {
     
+    var userLocationCompletion: ((Weather?) -> ())?
     let task: FetchWeatherTask
+    let checkLocationPermission: CheckLocationPermission
     
-    init(task: FetchWeatherTask) {
+    init(task: FetchWeatherTask, checkLocationPermission: CheckLocationPermission = CheckLocationPermission()) {
         self.task = task
+        self.checkLocationPermission = checkLocationPermission
     }
 }
 
 extension FetchWeather: FetchWeatherUseCase {
     func fetchWeatherAtCurrentLocation(with locationManager: CLLocationManager, _ completion: @escaping (Weather?) -> ()) {
-        completion(nil)
+        guard checkLocationPermission.isGranted() else {
+            completion(nil)
+            return
+        }
+        userLocationCompletion = completion
+        locationManager.delegate = self
+        locationManager.startUpdatingLocation()
     }
     
     func fetchWeather(at coordinates: (lat: Double, lon: Double), _ completion: @escaping (Weather?) -> ()) {
@@ -42,5 +51,15 @@ extension FetchWeather: FetchWeatherUseCase {
                 completion(Weather(json: json))
             })
         }
+    }
+}
+
+extension FetchWeather: CLLocationManagerDelegate {
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let location = locations.first, let completion = userLocationCompletion else { return }
+        manager.stopUpdatingLocation()
+        let coordinates = (lat: location.coordinate.latitude, lon: location.coordinate.longitude)
+        fetchWeather(at: coordinates, completion)
+        userLocationCompletion = nil
     }
 }

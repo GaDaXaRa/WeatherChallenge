@@ -41,7 +41,7 @@ class WeatherManagerTests: XCTestCase {
     }
     
     func testShouldReturnWeatherByUserLocation() {
-        let mockedLocationManager = MockedLocationManager()
+        let mockedLocationManager = Mocks.MockedLocationManager()
         let mockedLocation = CLLocation(latitude: 112.0, longitude: -343.22)
         mockedLocationManager.mockedLocation = mockedLocation
         let delegate = MockedDelegate(expectation: expectation(description: "weather by coordinates expectation"))
@@ -51,8 +51,8 @@ class WeatherManagerTests: XCTestCase {
         
         waitForExpectations(timeout: 0.5) { (error) in
             if error != nil { XCTFail() }
-            XCTAssertEqual(112.0, delegate.weather?.location.latitude)
-            XCTAssertEqual(-343.22, delegate.weather?.location.longitude)
+            XCTAssertEqual(mockedLocation.coordinate.latitude, delegate.weather?.location.latitude)
+            XCTAssertEqual(mockedLocation.coordinate.longitude, delegate.weather?.location.longitude)
         }
     }
 }
@@ -85,13 +85,6 @@ extension WeatherManagerTests {
         
         func fetchWeather(at city: String, _ completion: @escaping (Weather?) -> ()) {
             completion(Weather(json: Mocks.weatherJSON(at: city)))
-        }
-    }
-    
-    class MockedLocationManager: CLLocationManager {
-        var mockedLocation: CLLocation!
-        override var location: CLLocation? {
-            return mockedLocation
         }
     }
 }

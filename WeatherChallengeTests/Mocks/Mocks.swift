@@ -7,9 +7,19 @@
 //
 
 import Foundation
+import CoreLocation
 
 struct Mocks {
-    
+    class MockedLocationManager: CLLocationManager {
+        var mockedLocation: CLLocation!
+        override var location: CLLocation? {
+            return mockedLocation
+        }
+        
+        override func startUpdatingLocation() {
+            delegate?.locationManager!(self, didUpdateLocations: [location!])
+        }
+    }
     
     static func weatherJSON(at city: String = "London", coordinates: (lat: Double, lon: Double) = (lat: 51.51, lon:-0.13)) -> [String: Any] {
         return try! JSONSerialization.jsonObject(with: weather(at: city, coordinates: coordinates).data(using: .utf8)!, options: []) as! [String: Any]

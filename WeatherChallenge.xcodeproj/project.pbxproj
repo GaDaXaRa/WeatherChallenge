@@ -17,6 +17,7 @@
 		3F25FA471FCF38D500606A59 /* HTTPFetchWeatherTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F25FA461FCF38D500606A59 /* HTTPFetchWeatherTask.swift */; };
 		3F25FA4B1FD1CE7B00606A59 /* WeatherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F25FA4A1FD1CE7B00606A59 /* WeatherManager.swift */; };
 		3F25FA4D1FD1D20200606A59 /* WeatherManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F25FA4C1FD1D20200606A59 /* WeatherManagerTests.swift */; };
+		3F304F861FD86A3F0044BCCA /* CheckLocationPermission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F304F851FD86A3F0044BCCA /* CheckLocationPermission.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,7 @@
 		3F25FA461FCF38D500606A59 /* HTTPFetchWeatherTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPFetchWeatherTask.swift; sourceTree = "<group>"; };
 		3F25FA4A1FD1CE7B00606A59 /* WeatherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherManager.swift; sourceTree = "<group>"; };
 		3F25FA4C1FD1D20200606A59 /* WeatherManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherManagerTests.swift; sourceTree = "<group>"; };
+		3F304F851FD86A3F0044BCCA /* CheckLocationPermission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckLocationPermission.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				3F25FA3D1FCF35C600606A59 /* FetchWeather.swift */,
+				3F304F851FD86A3F0044BCCA /* CheckLocationPermission.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F304F861FD86A3F0044BCCA /* CheckLocationPermission.swift in Sources */,
 				3F25FA471FCF38D500606A59 /* HTTPFetchWeatherTask.swift in Sources */,
 				3F25FA341FCF295A00606A59 /* Weather.swift in Sources */,
 				3F25FA4B1FD1CE7B00606A59 /* WeatherManager.swift in Sources */,
