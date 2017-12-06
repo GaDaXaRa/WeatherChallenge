@@ -27,7 +27,7 @@ class FetchWeatherTests: XCTestCase {
     let sut = FetchWeather(task: MockedTask())
     
     func testShouldFetchWeatherFromACity() {
-        let sutExpectation = expectation(description: "fetch weather")
+        let sutExpectation = expectation(description: "fetch by city")
         sut.fetchWeather(at: "London") { weather in
             XCTAssertEqual("London", weather?.city)
             sutExpectation.fulfill()
@@ -39,7 +39,7 @@ class FetchWeatherTests: XCTestCase {
     }
     
     func testShouldFetchWeatherByCoordinates() {
-        let sutExpectation = expectation(description: "fetch weather")
+        let sutExpectation = expectation(description: "fetch by coordinates")
         sut.fetchWeather(at: (lat: 545.33, lon: -33.5)) { weather in
             XCTAssertEqual(545.33, weather?.location.latitude)
             XCTAssertEqual(-33.5, weather?.location.longitude)

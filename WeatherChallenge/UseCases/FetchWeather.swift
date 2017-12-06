@@ -6,7 +6,7 @@
 //  Copyright © 2017 Miguel Santiago Rodríguez. All rights reserved.
 //
 
-import UIKit
+import CoreLocation
 
 protocol FetchWeatherTask {
     func fetch(by city: String, _ completion: @escaping ([String : Any]?) -> ())
@@ -23,6 +23,10 @@ class FetchWeather: NSObject {
 }
 
 extension FetchWeather: FetchWeatherUseCase {
+    func fetchWeatherAtCurrentLocation(with locationManager: CLLocationManager, _ completion: @escaping (Weather?) -> ()) {
+        completion(nil)
+    }
+    
     func fetchWeather(at coordinates: (lat: Double, lon: Double), _ completion: @escaping (Weather?) -> ()) {
         DispatchQueue.global().async {
             let coordinates = (lat: "\(coordinates.lat)", lon: "\(coordinates.lon)")

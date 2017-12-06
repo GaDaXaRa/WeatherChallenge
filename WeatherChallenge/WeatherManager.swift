@@ -6,11 +6,12 @@
 //  Copyright © 2017 Miguel Santiago Rodríguez. All rights reserved.
 //
 
-import UIKit
+import CoreLocation
 
 protocol FetchWeatherUseCase {
     func fetchWeather(at city: String, _ completion: @escaping (Weather?) -> ())
     func fetchWeather(at coordinates: (lat: Double, lon: Double), _ completion: @escaping (Weather?) -> ())
+    func fetchWeatherAtCurrentLocation(with locationManager: CLLocationManager, _ completion: @escaping (Weather?) -> ())
 }
 
 protocol WeatherManagerDelegate: class {
@@ -40,6 +41,12 @@ class WeatherManager: NSObject {
     
     func weather(at coordinates: (lat: Double, lon: Double)) {
         fetchWeather.fetchWeather(at: coordinates) { (weather) in
+            self.weather = weather
+        }
+    }
+    
+    func weatherAtCurrentLocation(locationManager: CLLocationManager) {
+        fetchWeather.fetchWeatherAtCurrentLocation(with: locationManager) { (weather) in
             self.weather = weather
         }
     }
