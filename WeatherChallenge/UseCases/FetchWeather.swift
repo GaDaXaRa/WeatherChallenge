@@ -23,6 +23,10 @@ class FetchWeather: NSObject {
 }
 
 extension FetchWeather: FetchWeatherUseCase {
+    func fetchWeather(at coordinates: (lat: Double, lon: Double), _ completion: @escaping (Weather?) -> ()) {
+        completion(nil)
+    }
+    
     func fetchWeather(at city: String, _ completion: @escaping (Weather?) -> ()) {
         DispatchQueue.global().async {
             self.task.fetch(by: city, { (json) in
