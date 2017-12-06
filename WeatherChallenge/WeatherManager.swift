@@ -11,6 +11,9 @@ import CoreLocation
 protocol FetchWeatherUseCase {
     func fetchWeather(at city: String, _ completion: @escaping (Weather?) -> ())
     func fetchWeather(at coordinates: (lat: Double, lon: Double), _ completion: @escaping (Weather?) -> ())
+}
+
+protocol WeatherAtCurrentLocationUseCase {
     func fetchWeatherAtCurrentLocation(with locationManager: CLLocationManager, _ completion: @escaping (Weather?) -> ())
 }
 
@@ -27,10 +30,12 @@ class WeatherManager: NSObject {
     }
     
     let fetchWeather: FetchWeatherUseCase
+    let weatherAtCurrenLocation: WeatherAtCurrentLocationUseCase
     weak var delegate: WeatherManagerDelegate?    
     
-    init(fetchWeather: FetchWeatherUseCase = FetchWeather(task: HTTPFetchWeatherTask())) {
+    init(fetchWeather: FetchWeatherUseCase = FetchWeather(), weatherAtCurrenLocation: WeatherAtCurrentLocationUseCase = WeatherAtCurrentLocation()) {
         self.fetchWeather = fetchWeather
+        self.weatherAtCurrenLocation = weatherAtCurrenLocation
     }
 
     func weather(at city: String) {
@@ -46,7 +51,7 @@ class WeatherManager: NSObject {
     }
     
     func weatherAtCurrentLocation(locationManager: CLLocationManager) {
-        fetchWeather.fetchWeatherAtCurrentLocation(with: locationManager) { (weather) in
+        weatherAtCurrenLocation.fetchWeatherAtCurrentLocation(with: locationManager) { (weather) in
             self.weather = weather
         }
     }

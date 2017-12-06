@@ -7,7 +7,6 @@
 //
 
 import XCTest
-import CoreLocation
 
 @testable import WeatherChallenge
 
@@ -24,14 +23,7 @@ class FetchWeatherTests: XCTestCase {
         }        
     }
     
-    class MockedLocationPersmissionsChecker: CheckLocationPermission {
-        override func isGranted() -> Bool {
-            return true
-        }
-    }
-    
-    
-    let sut = FetchWeather(task: MockedTask(), checkLocationPermission: MockedLocationPersmissionsChecker())
+    let sut = FetchWeather(task: MockedTask())
     
     func testShouldFetchWeatherFromACity() {
         let sutExpectation = expectation(description: "fetch by city")
@@ -50,22 +42,6 @@ class FetchWeatherTests: XCTestCase {
         sut.fetchWeather(at: (lat: 545.33, lon: -33.5)) { weather in
             XCTAssertEqual(545.33, weather?.location.latitude)
             XCTAssertEqual(-33.5, weather?.location.longitude)
-            sutExpectation.fulfill()
-        }
-        
-        waitForExpectations(timeout: 0.5) { (error) in
-            if error != nil {XCTFail()}
-        }
-    }
-    
-    func testShouldFetchWeatherAtUserLocation() {
-        let sutExpectation = expectation(description: "fetch by user location")
-        let mockedLocationManager = Mocks.MockedLocationManager()
-        let mockedLocation = CLLocation(latitude: 112.0, longitude: -343.22)
-        mockedLocationManager.mockedLocation = mockedLocation
-        sut.fetchWeatherAtCurrentLocation(with: mockedLocationManager) { (weather) in
-            XCTAssertEqual(mockedLocation.coordinate.latitude, weather?.location.latitude)
-            XCTAssertEqual(mockedLocation.coordinate.longitude, weather?.location.longitude)
             sutExpectation.fulfill()
         }
         

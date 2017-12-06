@@ -13,7 +13,7 @@ import CoreLocation
 
 class WeatherManagerTests: XCTestCase {
     
-    let sut = WeatherManager(fetchWeather: MockedUseCase())
+    let sut = WeatherManager(fetchWeather: MockedUseCase(), weatherAtCurrenLocation: MockedWeatherAtCurrentLocationUseCase())
     
     func testShouldReturnWeatherByCity() {
         let delegate = MockedDelegate(expectation: expectation(description: "weather by city expectation"))
@@ -58,6 +58,7 @@ class WeatherManagerTests: XCTestCase {
 }
 
 extension WeatherManagerTests {
+        
     class MockedDelegate: WeatherManagerDelegate {
         var weather: Weather?
         let expectation: XCTestExpectation?
@@ -73,18 +74,19 @@ extension WeatherManagerTests {
     }
     
     class MockedUseCase: FetchWeatherUseCase {
-        func fetchWeatherAtCurrentLocation(with locationManager: CLLocationManager, _ completion: @escaping (Weather?) -> ()) {
-            let coordinates = (lat: locationManager.location!.coordinate.latitude, lon: locationManager.location!.coordinate.longitude)
-            completion(Weather(json: Mocks.weatherJSON(coordinates: coordinates)))
-        }
-        
-        
         func fetchWeather(at coordinates: (lat: Double, lon: Double), _ completion: @escaping (Weather?) -> ()) {
             completion(Weather(json: Mocks.weatherJSON(coordinates: coordinates)))
         }
         
         func fetchWeather(at city: String, _ completion: @escaping (Weather?) -> ()) {
             completion(Weather(json: Mocks.weatherJSON(at: city)))
+        }
+    }
+    
+    class MockedWeatherAtCurrentLocationUseCase: WeatherAtCurrentLocationUseCase {
+        func fetchWeatherAtCurrentLocation(with locationManager: CLLocationManager, _ completion: @escaping (Weather?) -> ()) {
+            let coordinates = (lat: locationManager.location!.coordinate.latitude, lon: locationManager.location!.coordinate.longitude)
+            completion(Weather(json: Mocks.weatherJSON(coordinates: coordinates)))
         }
     }
 }
