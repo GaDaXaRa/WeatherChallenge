@@ -36,7 +36,7 @@ class WeatherTests: XCTestCase {
         XCTAssertEqual("London", sut.city)
         XCTAssertEqual(277.15, sut.minTemp)
         XCTAssertEqual(279.15, sut.maxTemp)
-        XCTAssertEqual(URL(string:"\(WeatherTests.imageUrlPrefix)04n")!, sut.iconURL)
+        XCTAssertEqual(URL(string:"\(WeatherTests.imageUrlPrefix)04n.png")!, sut.iconURL)
         XCTAssertEqual(date, sut.creationDate)
         XCTAssertEqual(-0.13, sut.location.longitude)
         XCTAssertEqual(51.51, sut.location.latitude)
