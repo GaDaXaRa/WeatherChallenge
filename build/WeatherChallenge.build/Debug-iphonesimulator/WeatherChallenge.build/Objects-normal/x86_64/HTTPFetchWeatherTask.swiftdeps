@@ -10,7 +10,7 @@ provides-member:
 - ["16WeatherChallenge09HTTPFetchA4TaskC", "Configuration"]
 provides-dynamic-lookup:
 depends-top-level:
-- !private "!="
+- !private "=="
 - "Array"
 - "AssignmentPrecedence"
 - !private "BooleanLiteralType"
@@ -412,4 +412,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
 - "/Users/gadaxara/work/WeatherChallenge/WeatherChallenge/WeatherChallenge.h"
 - "/Users/gadaxara/work/WeatherChallenge/build/WeatherChallenge.build/Debug-iphonesimulator/WeatherChallenge.build/unextended-module.modulemap"
-interface-hash: "61aeaf14e345da3fb503c478aea7a6a1"
+interface-hash: "8328a6f0a8575812a22aecba26e2406f"

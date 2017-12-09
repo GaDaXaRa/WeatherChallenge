@@ -35,10 +35,19 @@
 		3F304F881FD89FB00044BCCA /* WeatherAtCurrentLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F304F871FD89FB00044BCCA /* WeatherAtCurrentLocation.swift */; };
 		3F304F8A1FD8A2680044BCCA /* WeatherAtCurrentLocationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F304F891FD8A2680044BCCA /* WeatherAtCurrentLocationTests.swift */; };
 		3F304F8C1FD8AD660044BCCA /* CodableDiskStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F304F8B1FD8AD660044BCCA /* CodableDiskStorage.swift */; };
+		3FEDF5711FDC11C900BCF72B /* WeatherChallengeIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FEDF5701FDC11C900BCF72B /* WeatherChallengeIntegrationTests.swift */; };
+		3FEDF5731FDC11C900BCF72B /* WeatherChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F25FA171FCF28D700606A59 /* WeatherChallenge.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		3F25FA221FCF28D700606A59 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3F25FA0E1FCF28D700606A59 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3F25FA161FCF28D700606A59;
+			remoteInfo = WeatherChallenge;
+		};
+		3FEDF5741FDC11C900BCF72B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 3F25FA0E1FCF28D700606A59 /* Project object */;
 			proxyType = 1;
@@ -65,6 +74,9 @@
 		3F304F871FD89FB00044BCCA /* WeatherAtCurrentLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAtCurrentLocation.swift; sourceTree = "<group>"; };
 		3F304F891FD8A2680044BCCA /* WeatherAtCurrentLocationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAtCurrentLocationTests.swift; sourceTree = "<group>"; };
 		3F304F8B1FD8AD660044BCCA /* CodableDiskStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodableDiskStorage.swift; sourceTree = "<group>"; };
+		3FEDF56E1FDC11C900BCF72B /* WeatherChallengeIntegrationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeatherChallengeIntegrationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3FEDF5701FDC11C900BCF72B /* WeatherChallengeIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherChallengeIntegrationTests.swift; sourceTree = "<group>"; };
+		3FEDF5721FDC11C900BCF72B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +95,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3FEDF56B1FDC11C900BCF72B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FEDF5731FDC11C900BCF72B /* WeatherChallenge.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -91,6 +111,7 @@
 			children = (
 				3F25FA191FCF28D700606A59 /* WeatherChallenge */,
 				3F25FA241FCF28D700606A59 /* WeatherChallengeTests */,
+				3FEDF56F1FDC11C900BCF72B /* WeatherChallengeIntegrationTests */,
 				3F25FA181FCF28D700606A59 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -100,6 +121,7 @@
 			children = (
 				3F25FA171FCF28D700606A59 /* WeatherChallenge.framework */,
 				3F25FA201FCF28D700606A59 /* WeatherChallengeTests.xctest */,
+				3FEDF56E1FDC11C900BCF72B /* WeatherChallengeIntegrationTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -181,6 +203,15 @@
 			path = Tasks;
 			sourceTree = "<group>";
 		};
+		3FEDF56F1FDC11C900BCF72B /* WeatherChallengeIntegrationTests */ = {
+			isa = PBXGroup;
+			children = (
+				3FEDF5701FDC11C900BCF72B /* WeatherChallengeIntegrationTests.swift */,
+				3FEDF5721FDC11C900BCF72B /* Info.plist */,
+			);
+			path = WeatherChallengeIntegrationTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -231,6 +262,24 @@
 			productReference = 3F25FA201FCF28D700606A59 /* WeatherChallengeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		3FEDF56D1FDC11C900BCF72B /* WeatherChallengeIntegrationTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3FEDF5761FDC11C900BCF72B /* Build configuration list for PBXNativeTarget "WeatherChallengeIntegrationTests" */;
+			buildPhases = (
+				3FEDF56A1FDC11C900BCF72B /* Sources */,
+				3FEDF56B1FDC11C900BCF72B /* Frameworks */,
+				3FEDF56C1FDC11C900BCF72B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3FEDF5751FDC11C900BCF72B /* PBXTargetDependency */,
+			);
+			name = WeatherChallengeIntegrationTests;
+			productName = WeatherChallengeIntegrationTests;
+			productReference = 3FEDF56E1FDC11C900BCF72B /* WeatherChallengeIntegrationTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -254,6 +303,10 @@
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
 					};
+					3FEDF56D1FDC11C900BCF72B = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = 3F25FA111FCF28D700606A59 /* Build configuration list for PBXProject "WeatherChallenge" */;
@@ -270,6 +323,7 @@
 			targets = (
 				3F25FA161FCF28D700606A59 /* WeatherChallenge */,
 				3F25FA1F1FCF28D700606A59 /* WeatherChallengeTests */,
+				3FEDF56D1FDC11C900BCF72B /* WeatherChallengeIntegrationTests */,
 				3FEDF5541FDAA93800BCF72B /* UniversalWeatherKit */,
 			);
 		};
@@ -284,6 +338,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		3F25FA1E1FCF28D700606A59 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3FEDF56C1FDC11C900BCF72B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -335,6 +396,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3FEDF56A1FDC11C900BCF72B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FEDF5711FDC11C900BCF72B /* WeatherChallengeIntegrationTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -342,6 +411,11 @@
 			isa = PBXTargetDependency;
 			target = 3F25FA161FCF28D700606A59 /* WeatherChallenge */;
 			targetProxy = 3F25FA221FCF28D700606A59 /* PBXContainerItemProxy */;
+		};
+		3FEDF5751FDC11C900BCF72B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3F25FA161FCF28D700606A59 /* WeatherChallenge */;
+			targetProxy = 3FEDF5741FDC11C900BCF72B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -552,6 +626,36 @@
 			};
 			name = Release;
 		};
+		3FEDF5771FDC11C900BCF72B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KDP29GBQ4N;
+				INFOPLIST_FILE = WeatherChallengeIntegrationTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gadaxara.WeatherChallengeIntegrationTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3FEDF5781FDC11C900BCF72B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KDP29GBQ4N;
+				INFOPLIST_FILE = WeatherChallengeIntegrationTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gadaxara.WeatherChallengeIntegrationTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -587,6 +691,15 @@
 			buildConfigurations = (
 				3FEDF5551FDAA93800BCF72B /* Debug */,
 				3FEDF5561FDAA93800BCF72B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3FEDF5761FDC11C900BCF72B /* Build configuration list for PBXNativeTarget "WeatherChallengeIntegrationTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3FEDF5771FDC11C900BCF72B /* Debug */,
+				3FEDF5781FDC11C900BCF72B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -1,9 +1,9 @@
 version: "Apple Swift version 4.0.2 (swiftlang-900.0.69.2 clang-900.0.38)"
 options: "5f3ff32758a3973162e640fce7bf7266"
-build_time: [1512732279, 783247000]
+build_time: [1512824627, 597376000]
 inputs:
   "/Users/gadaxara/work/WeatherChallenge/WeatherChallenge/UseCases/CheckLocationPermission.swift": [1512583965, 0]
-  "/Users/gadaxara/work/WeatherChallenge/WeatherChallenge/Tasks/HTTPFetchWeatherTask.swift": [1512150653, 0]
+  "/Users/gadaxara/work/WeatherChallenge/WeatherChallenge/Tasks/HTTPFetchWeatherTask.swift": [1512824563, 0]
   "/Users/gadaxara/work/WeatherChallenge/WeatherChallenge/UseCases/CodableDiskStorage.swift": [1512602969, 0]
   "/Users/gadaxara/work/WeatherChallenge/WeatherChallenge/UseCases/WeatherAtCurrentLocation.swift": [1512598617, 0]
   "/Users/gadaxara/work/WeatherChallenge/WeatherChallenge/Model/Weather.swift": [1512732277, 0]

@@ -39,7 +39,11 @@ extension HTTPFetchWeatherTask {
         guard let url = compose(url: configuration.baseUrl, with: payload)  else { return }
         
         configuration.session.dataTask(with: URLRequest(url: url)) { (data, response, error) in
-            guard error != nil, let data = data, let json = try? JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] else {
+            guard
+                error == nil,
+                let data = data,
+                let json = try? JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]
+            else {
                 completion(nil)
                 return
             }
@@ -60,7 +64,7 @@ extension HTTPFetchWeatherTask {
         let appId: String
         let baseUrl: URL
         
-        init(session: URLSession = URLSession.shared, baseUrl: URL = URL(string: "api.openweathermap.org/data/2.5/weather")!, appId: String = "b83c13b2ab60f7ec52b12d6fcf3f9f42") {
+        init(session: URLSession = URLSession.shared, baseUrl: URL = URL(string: "https://api.openweathermap.org/data/2.5/weather")!, appId: String = "b83c13b2ab60f7ec52b12d6fcf3f9f42") {
             self.session = session
             self.appId = appId
             self.baseUrl = baseUrl

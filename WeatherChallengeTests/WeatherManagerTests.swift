@@ -85,6 +85,10 @@ extension WeatherManagerTests {
             self.weather = weather
             expectation?.fulfill()
         }
+        
+        func didSaveWeather(_ weather: Weather) {
+            
+        }
     }
     
     class MockedUseCase: FetchWeatherUseCase {
