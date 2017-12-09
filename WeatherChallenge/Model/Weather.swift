@@ -8,20 +8,20 @@
 
 import Foundation
 
-struct Weather: Codable {
-    struct Location: Codable {
+public struct Weather: Codable {
+    public struct Location: Codable {
         let latitude: Double
         let longitude: Double
     }
     
-    let name: String
-    let description: String
-    let city: String
-    let minTemp: Float
-    let maxTemp: Float
-    let iconURL: URL?
-    let creationDate: Date
-    let location: Location
+    public let name: String
+    public let description: String
+    public let city: String
+    public let minTemp: Float
+    public let maxTemp: Float
+    public let iconURL: URL?
+    public let creationDate: Date
+    public let location: Location
     
     let imageUrlPrefix: String
     
@@ -57,13 +57,13 @@ struct Weather: Codable {
 }
 
 extension Weather.Location: Equatable {
-    static func ==(lhs: Weather.Location, rhs: Weather.Location) -> Bool {
+    public static func ==(lhs: Weather.Location, rhs: Weather.Location) -> Bool {
         return lhs.latitude == rhs.latitude && lhs.longitude == rhs.longitude
     }
 }
 
 extension Weather: Equatable {
-    static func ==(lhs: Weather, rhs: Weather) -> Bool {
+    public static func ==(lhs: Weather, rhs: Weather) -> Bool {
         return lhs.name == rhs.name && lhs.description == rhs.description && lhs.city == rhs.city && lhs.creationDate == rhs.creationDate && lhs.minTemp == rhs.minTemp && lhs.maxTemp == rhs.maxTemp && lhs.iconURL == rhs.iconURL && lhs.location == rhs.location
     }
     

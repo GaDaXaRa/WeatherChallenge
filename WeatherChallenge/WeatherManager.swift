@@ -17,7 +17,7 @@ protocol WeatherAtCurrentLocationUseCase {
     func fetchWeatherAtCurrentLocation(with locationManager: CLLocationManager, _ completion: @escaping (Weather?) -> ())
 }
 
-protocol WeatherManagerDelegate: class {
+public protocol WeatherManagerDelegate: class {
     func didUpdateWeather(_ weather: Weather)
     func didSaveWeather(_ weather: Weather)
 }
@@ -27,7 +27,7 @@ protocol WeatherStorage {
     func listAll(_: @escaping ([Weather]) -> ())
 }
 
-class WeatherManager: NSObject {
+open class WeatherManager: NSObject {
     private(set) var weather: Weather? {
         didSet {
             guard let weather = weather else { return }
@@ -35,11 +35,17 @@ class WeatherManager: NSObject {
         }
     }
     
-    let fetchWeather: FetchWeatherUseCase
-    let weatherAtCurrenLocation: WeatherAtCurrentLocationUseCase
-    let weatherStorage: WeatherStorage
+    private let fetchWeather: FetchWeatherUseCase
+    private let weatherAtCurrenLocation: WeatherAtCurrentLocationUseCase
+    private let weatherStorage: WeatherStorage
     
-    weak var delegate: WeatherManagerDelegate?    
+    open weak var delegate: WeatherManagerDelegate?
+    
+    public override init() {
+        self.fetchWeather = FetchWeather()
+        self.weatherAtCurrenLocation = WeatherAtCurrentLocation()
+        self.weatherStorage = CodableDiskStorage<Weather>()
+    }
     
     init(fetchWeather: FetchWeatherUseCase = FetchWeather(), weatherAtCurrenLocation: WeatherAtCurrentLocationUseCase = WeatherAtCurrentLocation(), weatherStorage: WeatherStorage = CodableDiskStorage<Weather>()) {
         self.fetchWeather = fetchWeather
@@ -47,30 +53,30 @@ class WeatherManager: NSObject {
         self.weatherStorage = weatherStorage
     }
 
-    func weather(at city: String) {
+    open func weather(at city: String) {
         fetchWeather.fetchWeather(at: city) { (weather) in
             self.weather = weather
         }
     }
     
-    func weather(at coordinates: (lat: Double, lon: Double)) {
+    open func weather(at coordinates: (lat: Double, lon: Double)) {
         fetchWeather.fetchWeather(at: coordinates) { (weather) in
             self.weather = weather
         }
     }
     
-    func weatherAtCurrentLocation(locationManager: CLLocationManager) {
+    open func weatherAtCurrentLocation(locationManager: CLLocationManager) {
         weatherAtCurrenLocation.fetchWeatherAtCurrentLocation(with: locationManager) { (weather) in
             self.weather = weather
         }
     }
     
-    func save(weather: Weather) {
+    open func save(weather: Weather) {
         weatherStorage.save(weather)
         delegate?.didSaveWeather(weather)
     }
     
-    func listSaved(_ completion: @escaping ([Weather]) -> ()) {
+    open func listSaved(_ completion: @escaping ([Weather]) -> ()) {
         weatherStorage.listAll(completion)
     }
 }

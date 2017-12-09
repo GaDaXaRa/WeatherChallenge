@@ -1,0 +1,33 @@
+{
+  'version': 0,
+  'case-sensitive': 'false',
+  'roots': [
+    {
+      'type': 'directory',
+      'name': "/Users/gadaxara/Library/Developer/Xcode/DerivedData/WeatherChallenge-fgobdavssfmhhmgcvmimvlecshzb/Build/Products/Debug-iphonesimulator/WeatherChallenge.framework/Headers",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "WeatherChallenge-Swift.h",
+          'external-contents': "/Users/gadaxara/Library/Developer/Xcode/DerivedData/WeatherChallenge-fgobdavssfmhhmgcvmimvlecshzb/Build/Products/Debug-iphonesimulator/WeatherChallenge.framework/Headers/WeatherChallenge-Swift.h"
+        },
+        {
+          'type': 'file',
+          'name': "WeatherChallenge.h",
+          'external-contents': "/Users/gadaxara/work/WeatherChallenge/WeatherChallenge/WeatherChallenge.h"
+        }
+      ]
+    },
+    {
+      'type': 'directory',
+      'name': "/Users/gadaxara/Library/Developer/Xcode/DerivedData/WeatherChallenge-fgobdavssfmhhmgcvmimvlecshzb/Build/Products/Debug-iphonesimulator/WeatherChallenge.framework/Modules",
+      'contents': [
+        {
+          'type': 'file',
+          'name': "module.modulemap",
+          'external-contents': "/Users/gadaxara/work/WeatherChallenge/build/WeatherChallenge.build/Debug-iphonesimulator/WeatherChallenge.build/module.modulemap"
+        }
+      ]
+    }
+  ]
+}

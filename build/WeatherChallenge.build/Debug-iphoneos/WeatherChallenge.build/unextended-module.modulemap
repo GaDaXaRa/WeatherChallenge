@@ -1,0 +1,10 @@
+framework module WeatherChallenge {
+  umbrella header "WeatherChallenge.h"
+
+  export *
+  module * { export * }
+}
+
+module WeatherChallenge.__Swift {
+    exclude header "WeatherChallenge-Swift.h"
+}

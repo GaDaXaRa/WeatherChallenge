@@ -1,0 +1,211 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "FetchWeatherUseCase"
+- "WeatherAtCurrentLocationUseCase"
+- "WeatherManagerDelegate"
+- "WeatherStorage"
+- "WeatherManager"
+provides-nominal:
+- "16WeatherChallenge05FetchA7UseCaseP"
+- "16WeatherChallenge0A24AtCurrentLocationUseCaseP"
+- "16WeatherChallenge0A15ManagerDelegateP"
+- "16WeatherChallenge0A7StorageP"
+- "16WeatherChallenge0A7ManagerC"
+provides-member:
+- ["16WeatherChallenge05FetchA7UseCaseP", ""]
+- ["16WeatherChallenge0A24AtCurrentLocationUseCaseP", ""]
+- ["16WeatherChallenge0A15ManagerDelegateP", ""]
+- ["16WeatherChallenge0A7StorageP", ""]
+- ["16WeatherChallenge0A7ManagerC", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- "AnyObject"
+- "AssignmentPrecedence"
+- "CLLocationManager"
+- !private "CodableDiskStorage"
+- "Double"
+- !private "FetchWeather"
+- "FetchWeatherUseCase"
+- "NSObject"
+- "String"
+- "Weather"
+- !private "WeatherAtCurrentLocation"
+- "WeatherAtCurrentLocationUseCase"
+- "WeatherManager"
+- "WeatherManagerDelegate"
+- "WeatherStorage"
+depends-member:
+- !private ["So25CLLocationManagerDelegateP", "init"]
+- !private ["s7CVarArgP", "CodableDiskStorage"]
+- !private ["s7CVarArgP", "FetchWeather"]
+- !private ["s7CVarArgP", "WeatherAtCurrentLocation"]
+- !private ["s7CVarArgP", "delegate"]
+- !private ["s7CVarArgP", "fetchWeather"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "weather"]
+- !private ["s7CVarArgP", "weatherAtCurrenLocation"]
+- !private ["s7CVarArgP", "weatherStorage"]
+- ["s7CVarArgP", ""]
+- !private ["16WeatherChallenge18CodableDiskStorageC", "deinit"]
+- !private ["16WeatherChallenge18CodableDiskStorageC", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "CodableDiskStorage"]
+- !private ["s28CustomDebugStringConvertibleP", "FetchWeather"]
+- !private ["s28CustomDebugStringConvertibleP", "WeatherAtCurrentLocation"]
+- !private ["s28CustomDebugStringConvertibleP", "delegate"]
+- !private ["s28CustomDebugStringConvertibleP", "fetchWeather"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "weather"]
+- !private ["s28CustomDebugStringConvertibleP", "weatherAtCurrenLocation"]
+- !private ["s28CustomDebugStringConvertibleP", "weatherStorage"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s23CustomStringConvertibleP", "CodableDiskStorage"]
+- !private ["s23CustomStringConvertibleP", "FetchWeather"]
+- !private ["s23CustomStringConvertibleP", "WeatherAtCurrentLocation"]
+- !private ["s23CustomStringConvertibleP", "delegate"]
+- !private ["s23CustomStringConvertibleP", "fetchWeather"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "weather"]
+- !private ["s23CustomStringConvertibleP", "weatherAtCurrenLocation"]
+- !private ["s23CustomStringConvertibleP", "weatherStorage"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s9EquatableP", "CodableDiskStorage"]
+- !private ["s9EquatableP", "FetchWeather"]
+- !private ["s9EquatableP", "WeatherAtCurrentLocation"]
+- !private ["s9EquatableP", "delegate"]
+- !private ["s9EquatableP", "fetchWeather"]
+- !private ["s9EquatableP", "init"]
+- !private ["s9EquatableP", "weather"]
+- !private ["s9EquatableP", "weatherAtCurrenLocation"]
+- !private ["s9EquatableP", "weatherStorage"]
+- ["s9EquatableP", ""]
+- !private ["16WeatherChallenge05FetchA0C", "deinit"]
+- !private ["16WeatherChallenge05FetchA0C", "init"]
+- ["16WeatherChallenge05FetchA7UseCaseP", "Double"]
+- ["16WeatherChallenge05FetchA7UseCaseP", "String"]
+- ["16WeatherChallenge05FetchA7UseCaseP", "Weather"]
+- ["16WeatherChallenge05FetchA7UseCaseP", "fetchWeather"]
+- !private ["16WeatherChallenge05FetchA7UseCaseP", "init"]
+- !private ["s8HashableP", "CodableDiskStorage"]
+- !private ["s8HashableP", "FetchWeather"]
+- !private ["s8HashableP", "WeatherAtCurrentLocation"]
+- !private ["s8HashableP", "delegate"]
+- !private ["s8HashableP", "fetchWeather"]
+- !private ["s8HashableP", "init"]
+- !private ["s8HashableP", "weather"]
+- !private ["s8HashableP", "weatherAtCurrenLocation"]
+- !private ["s8HashableP", "weatherStorage"]
+- ["s8HashableP", ""]
+- ["So8NSObjectC", "CLLocationManager"]
+- !private ["So8NSObjectC", "CodableDiskStorage"]
+- ["So8NSObjectC", "Double"]
+- !private ["So8NSObjectC", "FetchWeather"]
+- ["So8NSObjectC", "FetchWeatherUseCase"]
+- ["So8NSObjectC", "String"]
+- ["So8NSObjectC", "Weather"]
+- !private ["So8NSObjectC", "WeatherAtCurrentLocation"]
+- ["So8NSObjectC", "WeatherAtCurrentLocationUseCase"]
+- ["So8NSObjectC", "WeatherManagerDelegate"]
+- ["So8NSObjectC", "WeatherStorage"]
+- ["So8NSObjectC", "delegate"]
+- ["So8NSObjectC", "fetchWeather"]
+- ["So8NSObjectC", "init"]
+- ["So8NSObjectC", "listSaved"]
+- ["So8NSObjectC", "save"]
+- ["So8NSObjectC", "weather"]
+- ["So8NSObjectC", "weatherAtCurrenLocation"]
+- ["So8NSObjectC", "weatherAtCurrentLocation"]
+- ["So8NSObjectC", "weatherStorage"]
+- ["So8NSObjectC", ""]
+- !private ["So16NSObjectProtocolP", "CodableDiskStorage"]
+- !private ["So16NSObjectProtocolP", "FetchWeather"]
+- !private ["So16NSObjectProtocolP", "WeatherAtCurrentLocation"]
+- !private ["So16NSObjectProtocolP", "delegate"]
+- !private ["So16NSObjectProtocolP", "fetchWeather"]
+- !private ["So16NSObjectProtocolP", "init"]
+- !private ["So16NSObjectProtocolP", "weather"]
+- !private ["So16NSObjectProtocolP", "weatherAtCurrenLocation"]
+- !private ["So16NSObjectProtocolP", "weatherStorage"]
+- ["So16NSObjectProtocolP", ""]
+- ["16WeatherChallenge0A0V", "deinit"]
+- !private ["16WeatherChallenge0A17AtCurrentLocationC", "deinit"]
+- !private ["16WeatherChallenge0A17AtCurrentLocationC", "init"]
+- ["16WeatherChallenge0A24AtCurrentLocationUseCaseP", "CLLocationManager"]
+- ["16WeatherChallenge0A24AtCurrentLocationUseCaseP", "Weather"]
+- ["16WeatherChallenge0A24AtCurrentLocationUseCaseP", "fetchWeatherAtCurrentLocation"]
+- !private ["16WeatherChallenge0A24AtCurrentLocationUseCaseP", "init"]
+- ["16WeatherChallenge0A7ManagerC", "CLLocationManager"]
+- !private ["16WeatherChallenge0A7ManagerC", "CodableDiskStorage"]
+- ["16WeatherChallenge0A7ManagerC", "Double"]
+- !private ["16WeatherChallenge0A7ManagerC", "FetchWeather"]
+- ["16WeatherChallenge0A7ManagerC", "FetchWeatherUseCase"]
+- ["16WeatherChallenge0A7ManagerC", "String"]
+- ["16WeatherChallenge0A7ManagerC", "Weather"]
+- !private ["16WeatherChallenge0A7ManagerC", "WeatherAtCurrentLocation"]
+- ["16WeatherChallenge0A7ManagerC", "WeatherAtCurrentLocationUseCase"]
+- ["16WeatherChallenge0A7ManagerC", "WeatherManagerDelegate"]
+- ["16WeatherChallenge0A7ManagerC", "WeatherStorage"]
+- ["16WeatherChallenge0A7ManagerC", "deinit"]
+- ["16WeatherChallenge0A7ManagerC", "delegate"]
+- !private ["16WeatherChallenge0A7ManagerC", "fetchWeather"]
+- ["16WeatherChallenge0A7ManagerC", "init"]
+- ["16WeatherChallenge0A7ManagerC", "listSaved"]
+- ["16WeatherChallenge0A7ManagerC", "save"]
+- ["16WeatherChallenge0A7ManagerC", "weather"]
+- !private ["16WeatherChallenge0A7ManagerC", "weatherAtCurrenLocation"]
+- ["16WeatherChallenge0A7ManagerC", "weatherAtCurrentLocation"]
+- !private ["16WeatherChallenge0A7ManagerC", "weatherStorage"]
+- ["16WeatherChallenge0A15ManagerDelegateP", "Weather"]
+- ["16WeatherChallenge0A15ManagerDelegateP", "didSaveWeather"]
+- ["16WeatherChallenge0A15ManagerDelegateP", "didUpdateWeather"]
+- ["16WeatherChallenge0A7StorageP", "Weather"]
+- !private ["16WeatherChallenge0A7StorageP", "init"]
+- ["16WeatherChallenge0A7StorageP", "listAll"]
+- ["16WeatherChallenge0A7StorageP", "save"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "CodableDiskStorage"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "FetchWeather"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "WeatherAtCurrentLocation"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "delegate"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "fetchWeather"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "weather"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "weatherAtCurrenLocation"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "weatherStorage"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+depends-nominal:
+- !private "So25CLLocationManagerDelegateP"
+- "s7CVarArgP"
+- !private "16WeatherChallenge18CodableDiskStorageC"
+- "s28CustomDebugStringConvertibleP"
+- "s23CustomStringConvertibleP"
+- "s9EquatableP"
+- !private "16WeatherChallenge05FetchA0C"
+- "16WeatherChallenge05FetchA7UseCaseP"
+- "s8HashableP"
+- "So8NSObjectC"
+- "So16NSObjectProtocolP"
+- "16WeatherChallenge0A0V"
+- !private "16WeatherChallenge0A17AtCurrentLocationC"
+- "16WeatherChallenge0A24AtCurrentLocationUseCaseP"
+- "16WeatherChallenge0A7ManagerC"
+- "16WeatherChallenge0A15ManagerDelegateP"
+- "16WeatherChallenge0A7StorageP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreLocation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/x86_64/SwiftOnoneSupport.swiftmodule"
+- "/Users/gadaxara/work/WeatherChallenge/WeatherChallenge/WeatherChallenge.h"
+- "/Users/gadaxara/work/WeatherChallenge/build/WeatherChallenge.build/Debug-iphonesimulator/WeatherChallenge.build/unextended-module.modulemap"
+interface-hash: "a7beeed53100f69e374e1d348884909b"

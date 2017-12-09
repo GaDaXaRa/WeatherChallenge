@@ -1,0 +1,333 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "WeatherAtCurrentLocation"
+provides-nominal:
+- "16WeatherChallenge0A17AtCurrentLocationC"
+provides-member:
+- ["16WeatherChallenge0A17AtCurrentLocationC", ""]
+provides-dynamic-lookup:
+- "locationManager"
+depends-top-level:
+- "AssignmentPrecedence"
+- "CLLocation"
+- "CLLocationManager"
+- "CLLocationManagerDelegate"
+- "CheckLocationPermission"
+- !private "FetchWeather"
+- "FetchWeatherUseCase"
+- "NSObject"
+- !private "StringLiteralType"
+- "Weather"
+- "WeatherAtCurrentLocation"
+- "WeatherAtCurrentLocationUseCase"
+depends-member:
+- !private ["Sa", "first"]
+- !private ["s23BidirectionalCollectionP", "first"]
+- !private ["Sb", "_getBuiltinLogicValue"]
+- !private ["So10CLLocationC", "coordinate"]
+- !private ["SC22CLLocationCoordinate2DV", "latitude"]
+- !private ["SC22CLLocationCoordinate2DV", "longitude"]
+- !private ["So17CLLocationManagerC", "delegate"]
+- !private ["So17CLLocationManagerC", "startUpdatingLocation"]
+- !private ["So17CLLocationManagerC", "stopUpdatingLocation"]
+- !private ["So25CLLocationManagerDelegateP", "CheckLocationPermission"]
+- !private ["So25CLLocationManagerDelegateP", "FetchWeather"]
+- !private ["So25CLLocationManagerDelegateP", "checkLocationPermission"]
+- !private ["So25CLLocationManagerDelegateP", "fetchWeather"]
+- ["So25CLLocationManagerDelegateP", "fetchWeatherAtCurrentLocation"]
+- ["So25CLLocationManagerDelegateP", "locationManager"]
+- ["So25CLLocationManagerDelegateP", "locationManagerDidPauseLocationUpdates"]
+- ["So25CLLocationManagerDelegateP", "locationManagerDidResumeLocationUpdates"]
+- ["So25CLLocationManagerDelegateP", "locationManagerShouldDisplayHeadingCalibration"]
+- !private ["So25CLLocationManagerDelegateP", "userLocationCompletion"]
+- ["So25CLLocationManagerDelegateP", ""]
+- !private ["s7CVarArgP", "CheckLocationPermission"]
+- !private ["s7CVarArgP", "FetchWeather"]
+- !private ["s7CVarArgP", "checkLocationPermission"]
+- !private ["s7CVarArgP", "coordinate"]
+- !private ["s7CVarArgP", "delegate"]
+- !private ["s7CVarArgP", "fetchWeather"]
+- ["s7CVarArgP", "fetchWeatherAtCurrentLocation"]
+- !private ["s7CVarArgP", "first"]
+- !private ["s7CVarArgP", "init"]
+- !private ["s7CVarArgP", "isGranted"]
+- ["s7CVarArgP", "locationManager"]
+- ["s7CVarArgP", "locationManagerDidPauseLocationUpdates"]
+- ["s7CVarArgP", "locationManagerDidResumeLocationUpdates"]
+- ["s7CVarArgP", "locationManagerShouldDisplayHeadingCalibration"]
+- !private ["s7CVarArgP", "startUpdatingLocation"]
+- !private ["s7CVarArgP", "stopUpdatingLocation"]
+- !private ["s7CVarArgP", "userLocationCompletion"]
+- ["s7CVarArgP", ""]
+- !private ["16WeatherChallenge23CheckLocationPermissionC", "init"]
+- !private ["16WeatherChallenge23CheckLocationPermissionC", "isGranted"]
+- !private ["s10CollectionP", "first"]
+- !private ["s28CustomDebugStringConvertibleP", "CheckLocationPermission"]
+- !private ["s28CustomDebugStringConvertibleP", "FetchWeather"]
+- !private ["s28CustomDebugStringConvertibleP", "checkLocationPermission"]
+- !private ["s28CustomDebugStringConvertibleP", "coordinate"]
+- !private ["s28CustomDebugStringConvertibleP", "delegate"]
+- !private ["s28CustomDebugStringConvertibleP", "fetchWeather"]
+- ["s28CustomDebugStringConvertibleP", "fetchWeatherAtCurrentLocation"]
+- !private ["s28CustomDebugStringConvertibleP", "first"]
+- !private ["s28CustomDebugStringConvertibleP", "init"]
+- !private ["s28CustomDebugStringConvertibleP", "isGranted"]
+- ["s28CustomDebugStringConvertibleP", "locationManager"]
+- ["s28CustomDebugStringConvertibleP", "locationManagerDidPauseLocationUpdates"]
+- ["s28CustomDebugStringConvertibleP", "locationManagerDidResumeLocationUpdates"]
+- ["s28CustomDebugStringConvertibleP", "locationManagerShouldDisplayHeadingCalibration"]
+- !private ["s28CustomDebugStringConvertibleP", "startUpdatingLocation"]
+- !private ["s28CustomDebugStringConvertibleP", "stopUpdatingLocation"]
+- !private ["s28CustomDebugStringConvertibleP", "userLocationCompletion"]
+- ["s28CustomDebugStringConvertibleP", ""]
+- !private ["s29CustomPlaygroundQuickLookableP", "_getBuiltinLogicValue"]
+- !private ["s17CustomReflectableP", "_getBuiltinLogicValue"]
+- !private ["s17CustomReflectableP", "first"]
+- !private ["s17CustomReflectableP", "init"]
+- !private ["s23CustomStringConvertibleP", "CheckLocationPermission"]
+- !private ["s23CustomStringConvertibleP", "FetchWeather"]
+- !private ["s23CustomStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s23CustomStringConvertibleP", "checkLocationPermission"]
+- !private ["s23CustomStringConvertibleP", "coordinate"]
+- !private ["s23CustomStringConvertibleP", "delegate"]
+- !private ["s23CustomStringConvertibleP", "fetchWeather"]
+- ["s23CustomStringConvertibleP", "fetchWeatherAtCurrentLocation"]
+- !private ["s23CustomStringConvertibleP", "first"]
+- !private ["s23CustomStringConvertibleP", "init"]
+- !private ["s23CustomStringConvertibleP", "isGranted"]
+- ["s23CustomStringConvertibleP", "locationManager"]
+- ["s23CustomStringConvertibleP", "locationManagerDidPauseLocationUpdates"]
+- ["s23CustomStringConvertibleP", "locationManagerDidResumeLocationUpdates"]
+- ["s23CustomStringConvertibleP", "locationManagerShouldDisplayHeadingCalibration"]
+- !private ["s23CustomStringConvertibleP", "startUpdatingLocation"]
+- !private ["s23CustomStringConvertibleP", "stopUpdatingLocation"]
+- !private ["s23CustomStringConvertibleP", "userLocationCompletion"]
+- ["s23CustomStringConvertibleP", ""]
+- !private ["s9DecodableP", "_getBuiltinLogicValue"]
+- !private ["s9DecodableP", "first"]
+- !private ["s9EncodableP", "_getBuiltinLogicValue"]
+- !private ["s9EncodableP", "first"]
+- !private ["s9EquatableP", "CheckLocationPermission"]
+- !private ["s9EquatableP", "FetchWeather"]
+- !private ["s9EquatableP", "_getBuiltinLogicValue"]
+- !private ["s9EquatableP", "checkLocationPermission"]
+- !private ["s9EquatableP", "coordinate"]
+- !private ["s9EquatableP", "delegate"]
+- !private ["s9EquatableP", "fetchWeather"]
+- ["s9EquatableP", "fetchWeatherAtCurrentLocation"]
+- !private ["s9EquatableP", "init"]
+- !private ["s9EquatableP", "isGranted"]
+- ["s9EquatableP", "locationManager"]
+- ["s9EquatableP", "locationManagerDidPauseLocationUpdates"]
+- ["s9EquatableP", "locationManagerDidResumeLocationUpdates"]
+- ["s9EquatableP", "locationManagerShouldDisplayHeadingCalibration"]
+- !private ["s9EquatableP", "startUpdatingLocation"]
+- !private ["s9EquatableP", "stopUpdatingLocation"]
+- !private ["s9EquatableP", "userLocationCompletion"]
+- ["s9EquatableP", ""]
+- !private ["s25ExpressibleByArrayLiteralP", "first"]
+- !private ["s27ExpressibleByBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s43ExpressibleByExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s26ExpressibleByStringLiteralP", "init"]
+- !private ["s33ExpressibleByUnicodeScalarLiteralP", "init"]
+- !private ["16WeatherChallenge05FetchA0C", "deinit"]
+- !private ["16WeatherChallenge05FetchA0C", "init"]
+- !private ["16WeatherChallenge05FetchA7UseCaseP", "fetchWeather"]
+- !private ["16WeatherChallenge05FetchA7UseCaseP", "init"]
+- !private ["s8HashableP", "CheckLocationPermission"]
+- !private ["s8HashableP", "FetchWeather"]
+- !private ["s8HashableP", "_getBuiltinLogicValue"]
+- !private ["s8HashableP", "checkLocationPermission"]
+- !private ["s8HashableP", "coordinate"]
+- !private ["s8HashableP", "delegate"]
+- !private ["s8HashableP", "fetchWeather"]
+- ["s8HashableP", "fetchWeatherAtCurrentLocation"]
+- !private ["s8HashableP", "init"]
+- !private ["s8HashableP", "isGranted"]
+- ["s8HashableP", "locationManager"]
+- ["s8HashableP", "locationManagerDidPauseLocationUpdates"]
+- ["s8HashableP", "locationManagerDidResumeLocationUpdates"]
+- ["s8HashableP", "locationManagerShouldDisplayHeadingCalibration"]
+- !private ["s8HashableP", "startUpdatingLocation"]
+- !private ["s8HashableP", "stopUpdatingLocation"]
+- !private ["s8HashableP", "userLocationCompletion"]
+- ["s8HashableP", ""]
+- !private ["s25LosslessStringConvertibleP", "_getBuiltinLogicValue"]
+- !private ["s17MutableCollectionP", "first"]
+- !private ["So8NSCodingP", "coordinate"]
+- !private ["So9NSCopyingP", "coordinate"]
+- ["So8NSObjectC", "CLLocation"]
+- ["So8NSObjectC", "CLLocationManager"]
+- ["So8NSObjectC", "CheckLocationPermission"]
+- !private ["So8NSObjectC", "FetchWeather"]
+- ["So8NSObjectC", "FetchWeatherUseCase"]
+- ["So8NSObjectC", "Weather"]
+- ["So8NSObjectC", "checkLocationPermission"]
+- !private ["So8NSObjectC", "coordinate"]
+- !private ["So8NSObjectC", "delegate"]
+- ["So8NSObjectC", "fetchWeather"]
+- ["So8NSObjectC", "fetchWeatherAtCurrentLocation"]
+- ["So8NSObjectC", "init"]
+- !private ["So8NSObjectC", "isGranted"]
+- ["So8NSObjectC", "locationManager"]
+- ["So8NSObjectC", "locationManagerDidPauseLocationUpdates"]
+- ["So8NSObjectC", "locationManagerDidResumeLocationUpdates"]
+- ["So8NSObjectC", "locationManagerShouldDisplayHeadingCalibration"]
+- !private ["So8NSObjectC", "startUpdatingLocation"]
+- !private ["So8NSObjectC", "stopUpdatingLocation"]
+- ["So8NSObjectC", "userLocationCompletion"]
+- ["So8NSObjectC", ""]
+- !private ["So16NSObjectProtocolP", "CheckLocationPermission"]
+- !private ["So16NSObjectProtocolP", "FetchWeather"]
+- !private ["So16NSObjectProtocolP", "checkLocationPermission"]
+- !private ["So16NSObjectProtocolP", "coordinate"]
+- !private ["So16NSObjectProtocolP", "delegate"]
+- !private ["So16NSObjectProtocolP", "fetchWeather"]
+- ["So16NSObjectProtocolP", "fetchWeatherAtCurrentLocation"]
+- !private ["So16NSObjectProtocolP", "init"]
+- !private ["So16NSObjectProtocolP", "isGranted"]
+- ["So16NSObjectProtocolP", "locationManager"]
+- ["So16NSObjectProtocolP", "locationManagerDidPauseLocationUpdates"]
+- ["So16NSObjectProtocolP", "locationManagerDidResumeLocationUpdates"]
+- ["So16NSObjectProtocolP", "locationManagerShouldDisplayHeadingCalibration"]
+- !private ["So16NSObjectProtocolP", "startUpdatingLocation"]
+- !private ["So16NSObjectProtocolP", "stopUpdatingLocation"]
+- !private ["So16NSObjectProtocolP", "userLocationCompletion"]
+- ["So16NSObjectProtocolP", ""]
+- !private ["So14NSSecureCodingP", "coordinate"]
+- !private ["s22RandomAccessCollectionP", "first"]
+- !private ["s26RangeReplaceableCollectionP", "first"]
+- !private ["s8SequenceP", "first"]
+- !private ["s12StaticStringV", "init"]
+- ["16WeatherChallenge0A17AtCurrentLocationC", "CLLocation"]
+- ["16WeatherChallenge0A17AtCurrentLocationC", "CLLocationManager"]
+- ["16WeatherChallenge0A17AtCurrentLocationC", "CheckLocationPermission"]
+- !private ["16WeatherChallenge0A17AtCurrentLocationC", "FetchWeather"]
+- ["16WeatherChallenge0A17AtCurrentLocationC", "FetchWeatherUseCase"]
+- ["16WeatherChallenge0A17AtCurrentLocationC", "Weather"]
+- ["16WeatherChallenge0A17AtCurrentLocationC", "checkLocationPermission"]
+- ["16WeatherChallenge0A17AtCurrentLocationC", "deinit"]
+- ["16WeatherChallenge0A17AtCurrentLocationC", "fetchWeather"]
+- ["16WeatherChallenge0A17AtCurrentLocationC", "fetchWeatherAtCurrentLocation"]
+- ["16WeatherChallenge0A17AtCurrentLocationC", "init"]
+- ["16WeatherChallenge0A17AtCurrentLocationC", "locationManager"]
+- ["16WeatherChallenge0A17AtCurrentLocationC", "locationManagerDidPauseLocationUpdates"]
+- ["16WeatherChallenge0A17AtCurrentLocationC", "locationManagerDidResumeLocationUpdates"]
+- ["16WeatherChallenge0A17AtCurrentLocationC", "locationManagerShouldDisplayHeadingCalibration"]
+- ["16WeatherChallenge0A17AtCurrentLocationC", "userLocationCompletion"]
+- !private ["16WeatherChallenge0A24AtCurrentLocationUseCaseP", "CheckLocationPermission"]
+- !private ["16WeatherChallenge0A24AtCurrentLocationUseCaseP", "FetchWeather"]
+- !private ["16WeatherChallenge0A24AtCurrentLocationUseCaseP", "checkLocationPermission"]
+- !private ["16WeatherChallenge0A24AtCurrentLocationUseCaseP", "fetchWeather"]
+- ["16WeatherChallenge0A24AtCurrentLocationUseCaseP", "fetchWeatherAtCurrentLocation"]
+- ["16WeatherChallenge0A24AtCurrentLocationUseCaseP", "locationManager"]
+- ["16WeatherChallenge0A24AtCurrentLocationUseCaseP", "locationManagerDidPauseLocationUpdates"]
+- ["16WeatherChallenge0A24AtCurrentLocationUseCaseP", "locationManagerDidResumeLocationUpdates"]
+- ["16WeatherChallenge0A24AtCurrentLocationUseCaseP", "locationManagerShouldDisplayHeadingCalibration"]
+- !private ["16WeatherChallenge0A24AtCurrentLocationUseCaseP", "userLocationCompletion"]
+- ["16WeatherChallenge0A24AtCurrentLocationUseCaseP", ""]
+- !private ["s14_ArrayProtocolP", "first"]
+- !private ["s23_BidirectionalIndexableP", "first"]
+- !private ["s24_DestructorSafeContainerP", "first"]
+- !private ["s35_ExpressibleByBuiltinBooleanLiteralP", "_getBuiltinLogicValue"]
+- !private ["s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP", "init"]
+- !private ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+- !private ["s41_ExpressibleByBuiltinUnicodeScalarLiteralP", "init"]
+- !private ["s10_IndexableP", "first"]
+- !private ["s14_IndexableBaseP", "first"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "CheckLocationPermission"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "FetchWeather"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "checkLocationPermission"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "coordinate"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "delegate"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "fetchWeather"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "fetchWeatherAtCurrentLocation"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "init"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "isGranted"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "locationManager"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "locationManagerDidPauseLocationUpdates"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "locationManagerDidResumeLocationUpdates"]
+- ["10Foundation27_KeyValueCodingAndObservingP", "locationManagerShouldDisplayHeadingCalibration"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "startUpdatingLocation"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "stopUpdatingLocation"]
+- !private ["10Foundation27_KeyValueCodingAndObservingP", "userLocationCompletion"]
+- ["10Foundation27_KeyValueCodingAndObservingP", ""]
+- !private ["s17_MutableIndexableP", "first"]
+- !private ["s21_ObjectiveCBridgeableP", "_getBuiltinLogicValue"]
+- !private ["s21_ObjectiveCBridgeableP", "first"]
+- !private ["s21_ObjectiveCBridgeableP", "latitude"]
+- !private ["s21_ObjectiveCBridgeableP", "longitude"]
+- !private ["s22_RandomAccessIndexableP", "first"]
+- !private ["s26_RangeReplaceableIndexableP", "first"]
+depends-nominal:
+- !private "Sa"
+- !private "s23BidirectionalCollectionP"
+- !private "Sb"
+- !private "So10CLLocationC"
+- !private "SC22CLLocationCoordinate2DV"
+- !private "So17CLLocationManagerC"
+- "So25CLLocationManagerDelegateP"
+- "s7CVarArgP"
+- !private "16WeatherChallenge23CheckLocationPermissionC"
+- !private "s10CollectionP"
+- "s28CustomDebugStringConvertibleP"
+- !private "s29CustomPlaygroundQuickLookableP"
+- !private "s17CustomReflectableP"
+- "s23CustomStringConvertibleP"
+- !private "s9DecodableP"
+- !private "s9EncodableP"
+- "s9EquatableP"
+- !private "s25ExpressibleByArrayLiteralP"
+- !private "s27ExpressibleByBooleanLiteralP"
+- !private "s43ExpressibleByExtendedGraphemeClusterLiteralP"
+- !private "s26ExpressibleByStringLiteralP"
+- !private "s33ExpressibleByUnicodeScalarLiteralP"
+- !private "16WeatherChallenge05FetchA0C"
+- !private "16WeatherChallenge05FetchA7UseCaseP"
+- "s8HashableP"
+- !private "s25LosslessStringConvertibleP"
+- !private "s17MutableCollectionP"
+- !private "So8NSCodingP"
+- !private "So9NSCopyingP"
+- "So8NSObjectC"
+- "So16NSObjectProtocolP"
+- !private "So14NSSecureCodingP"
+- !private "s22RandomAccessCollectionP"
+- !private "s26RangeReplaceableCollectionP"
+- !private "s8SequenceP"
+- !private "s12StaticStringV"
+- "16WeatherChallenge0A17AtCurrentLocationC"
+- "16WeatherChallenge0A24AtCurrentLocationUseCaseP"
+- !private "s14_ArrayProtocolP"
+- !private "s23_BidirectionalIndexableP"
+- !private "s24_DestructorSafeContainerP"
+- !private "s35_ExpressibleByBuiltinBooleanLiteralP"
+- !private "s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+- !private "s34_ExpressibleByBuiltinStringLiteralP"
+- !private "s41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+- !private "s10_IndexableP"
+- !private "s14_IndexableBaseP"
+- "10Foundation27_KeyValueCodingAndObservingP"
+- !private "s17_MutableIndexableP"
+- !private "s21_ObjectiveCBridgeableP"
+- !private "s22_RandomAccessIndexableP"
+- !private "s26_RangeReplaceableIndexableP"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.apinotesc"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/QuartzCore.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Metal.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreLocation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreFoundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/SwiftOnoneSupport.swiftmodule"
+- "/Users/gadaxara/work/WeatherChallenge/WeatherChallenge/WeatherChallenge.h"
+- "/Users/gadaxara/work/WeatherChallenge/build/WeatherChallenge.build/Debug-iphoneos/WeatherChallenge.build/unextended-module.modulemap"
+interface-hash: "4cf2c200f4a173636fac2f4208574da0"

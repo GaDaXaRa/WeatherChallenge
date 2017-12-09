@@ -6,6 +6,20 @@
 	objectVersion = 48;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		3FEDF5541FDAA93800BCF72B /* UniversalWeatherKit */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 3FEDF5571FDAA93800BCF72B /* Build configuration list for PBXAggregateTarget "UniversalWeatherKit" */;
+			buildPhases = (
+				3FEDF5581FDAA94200BCF72B /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = UniversalWeatherKit;
+			productName = UniversalWeatherKit;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		3F25FA211FCF28D700606A59 /* WeatherChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F25FA171FCF28D700606A59 /* WeatherChallenge.framework */; };
 		3F25FA281FCF28D700606A59 /* WeatherChallenge.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F25FA1A1FCF28D700606A59 /* WeatherChallenge.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -236,6 +250,10 @@
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
 					};
+					3FEDF5541FDAA93800BCF72B = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = 3F25FA111FCF28D700606A59 /* Build configuration list for PBXProject "WeatherChallenge" */;
@@ -252,6 +270,7 @@
 			targets = (
 				3F25FA161FCF28D700606A59 /* WeatherChallenge */,
 				3F25FA1F1FCF28D700606A59 /* WeatherChallengeTests */,
+				3FEDF5541FDAA93800BCF72B /* UniversalWeatherKit */,
 			);
 		};
 /* End PBXProject section */
@@ -272,6 +291,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3FEDF5581FDAA94200BCF72B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/sh\nUNIVERSAL_OUTPUTFOLDER=${BUILD_DIR}/${CONFIGURATION}-universal\n# make sure the output directory exists\nmkdir -p \"${UNIVERSAL_OUTPUTFOLDER}\"\n# Step 1. Build Device and Simulator versions\nxcodebuild -target \"WeatherChallenge\" ONLY_ACTIVE_ARCH=NO -configuration ${CONFIGURATION} -sdk iphoneos  BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\" clean build\nxcodebuild -target \"WeatherChallenge\" -configuration ${CONFIGURATION} -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO BUILD_DIR=\"${BUILD_DIR}\" BUILD_ROOT=\"${BUILD_ROOT}\" clean build\n# Step 2. Copy the framework structure (from iphoneos build) to the universal folder\ncp -R \"${BUILD_DIR}/${CONFIGURATION}-iphoneos/WeatherChallenge.framework\" \"${UNIVERSAL_OUTPUTFOLDER}/\"\n# Step 3. Copy Swift modules from iphonesimulator build (if it exists) to the copied framework directory\nSIMULATOR_SWIFT_MODULES_DIR=\"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/WeatherChallenge.framework/Modules/WeatherChallenge.swiftmodule/.\"\nif [ -d \"${SIMULATOR_SWIFT_MODULES_DIR}\" ]; then\ncp -R \"${SIMULATOR_SWIFT_MODULES_DIR}\" \"${UNIVERSAL_OUTPUTFOLDER}/WeatherChallenge.framework/Modules/WeatherChallenge.swiftmodule\"\nfi\n# Step 4. Create universal binary file using lipo and place the combined executable in the copied framework directory\nlipo -create -output \"${UNIVERSAL_OUTPUTFOLDER}/WeatherChallenge.framework/WeatherChallenge\" \"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/WeatherChallenge.framework/WeatherChallenge\" \"${BUILD_DIR}/${CONFIGURATION}-iphoneos/WeatherChallenge.framework/WeatherChallenge\"\n# Step 5. Convenience step to copy the framework to the project's directory\ncp -R \"${UNIVERSAL_OUTPUTFOLDER}/WeatherChallenge.framework\" \"${PROJECT_DIR}\"\n# Step 6. Convenience step to open the project's directory in Finder\nopen \"${PROJECT_DIR}\"";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3F25FA121FCF28D700606A59 /* Sources */ = {
@@ -360,7 +395,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -414,7 +449,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -499,6 +534,24 @@
 			};
 			name = Release;
 		};
+		3FEDF5551FDAA93800BCF72B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KDP29GBQ4N;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		3FEDF5561FDAA93800BCF72B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KDP29GBQ4N;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -525,6 +578,15 @@
 			buildConfigurations = (
 				3F25FA2F1FCF28D700606A59 /* Debug */,
 				3F25FA301FCF28D700606A59 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3FEDF5571FDAA93800BCF72B /* Build configuration list for PBXAggregateTarget "UniversalWeatherKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3FEDF5551FDAA93800BCF72B /* Debug */,
+				3FEDF5561FDAA93800BCF72B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
