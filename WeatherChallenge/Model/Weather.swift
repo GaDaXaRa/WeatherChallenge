@@ -25,7 +25,7 @@ public struct Weather: Codable {
     
     let imageUrlPrefix: String
     
-    init?(json: [String: Any]?, creationDate: Date = Date(), imageUrlPrefix: String = "http://openweathermap.org/img/w/") {
+    init?(json: [String: Any]?, creationDate: Date = Date(), imageUrlPrefix: String = "https://openweathermap.org/img/w/") {
         guard
             let json = json,
             let city = json["name"] as? String,
@@ -49,7 +49,7 @@ public struct Weather: Codable {
         self.creationDate = creationDate
         self.minTemp = minTemp
         self.maxTemp = maxTemp
-        self.iconURL = URL(string: "\(imageUrlPrefix)\(icon)")
+        self.iconURL = URL(string: "\(imageUrlPrefix)\(icon).png")
         self.location = Location(latitude: latitude, longitude: longitude)
         
         self.imageUrlPrefix = imageUrlPrefix
