@@ -38,11 +38,11 @@ class CodableDiskStorage<T: Codable>: NSObject {
     }
     
     func fetchAll() -> [T] {
-        guard let items = try? decoder.decode(T.self, from: Data(contentsOf: storageLocation)) as? [T] else {
+        guard let items = try? decoder.decode([T].self, from: Data(contentsOf: storageLocation)) else {
             return [T]()
         }
         
-        return items!
+        return items
     }
 }
 

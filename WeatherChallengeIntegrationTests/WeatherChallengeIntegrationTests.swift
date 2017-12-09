@@ -34,6 +34,7 @@ class WeatherChallengeIntegrationTests: XCTestCase {
     func testShouldAskFroWeather() {
         let sut = WeatherManager()
         let delegate = MockedDelegate(delegateExpectation: expectation(description: "fetch weather expectataion"))
+        let saveExpectation = expectation(description: "save weather expectation")
         sut.delegate = delegate
         sut.weather(at: "London")
         
